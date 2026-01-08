@@ -10,6 +10,9 @@ export default function Home() {
           <CategoryFilter />
           <PriceFilter />
         </div>
-      </div>
+
+      {/* Main Content */}
+      
+    </div>
   );
 }
