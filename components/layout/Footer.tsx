@@ -19,7 +19,7 @@ function Footer() {
             <div className='flex space-x-4'><FaFacebookF /><FaTwitter /><FaInstagram /></div>
         </div>
     </div>
-    <div className='px-8 text-gray-600 shadow-2xl py-4'>© Copyright 2026, All Rights Reserved</div>
+    <div className='px-8 text-gray-600 py-4'>© Copyright 2026, All Rights Reserved</div>
     </div>
   )
 }
