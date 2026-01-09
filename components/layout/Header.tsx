@@ -1,6 +1,7 @@
 import React from 'react'
 import { CiShoppingCart, CiUser } from 'react-icons/ci'
 import { FaCircle } from 'react-icons/fa'
+import Searchbar from '../filters/Searchbar'
 
 function Header() {
   return (
@@ -9,9 +10,7 @@ function Header() {
           <FaCircle className='text-2xl text-orange-600' />
           <h1 className='font-bold text-xl tracking-widest'>WHATBYTES</h1>
         </div>
-        <div className='w-full sm:px-40'>
-          <input className='border w-full border-gray-300 shadow  rounded-md px-4 py-2 focus:outline-none focus:shadow-lg' placeholder="Search for products" />
-        </div>
+        <Searchbar />
         <div className='flex justify-center items-center gap-2'>
             <CiShoppingCart className='border rounded-full text-5xl p-2 cursor-pointer' />
             <CiUser className='bg-[#18181B] text-white rounded-full text-5xl p-2 cursor-pointer' />
