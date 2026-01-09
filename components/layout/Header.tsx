@@ -20,7 +20,7 @@ const { searchText, setSearchText } = useSearch();
         </div>
         <Searchbar value={searchText} onChange={setSearchText} />
         <div className='flex justify-center items-center gap-2'>
-            <CiShoppingCart className='border rounded-full text-5xl p-2 cursor-pointer' />
+            <CiShoppingCart onClick={() => (window.location.href = '/cart')} className='border rounded-full text-5xl p-2 cursor-pointer' />
             <CiUser className='bg-[#18181B] text-white rounded-full text-5xl p-2 cursor-pointer' />
         </div>
     </div>
