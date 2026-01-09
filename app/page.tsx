@@ -1,17 +1,12 @@
-import CategoryFilter from "@/components/filters/CategoryFilter";
-import PriceFilter from "@/components/filters/PriceFilter";
+import Sidebar from "@/components/filters/Sidebar";
 import ProductGrid from "@/components/product/ProductGrid";
 import { products } from "@/data/products";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="flex">
       {/* Sidebar */}
-        <div className="w-96 h-screen bg-[#FAFAFA] p-4">
-          <CategoryFilter />
-          <PriceFilter />
-        </div>
+        <Sidebar />
 
       {/* Main Content */}
       <div className="w-full">
