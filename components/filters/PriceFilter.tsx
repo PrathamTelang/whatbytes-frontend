@@ -1,6 +1,8 @@
+import { useSearch } from '@/context/SearchContext';
 import React from 'react'
 
 function PriceFilter() {
+  const { maxPrice, setMaxPrice } = useSearch();
   return (
     <div>
           <h2 className="text-md font-semibold mt-8">Price Range</h2>
@@ -9,6 +11,8 @@ function PriceFilter() {
             min="0"
             max="1000"
             className="w-full mt-6 cursor-pointer"
+            value={maxPrice}
+            onChange={(e) => setMaxPrice(Number(e.target.value))}
           />
           <div className="flex justify-between text-sm mt-2">
             <span>$0</span>

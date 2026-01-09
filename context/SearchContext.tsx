@@ -6,6 +6,7 @@ const SearchContext = createContext<any>(null);
 export function SearchProvider({ children }: { children: React.ReactNode }) {
   const [searchText, setSearchText] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [maxPrice, setMaxPrice] = useState(1000);
 
   return (
     <SearchContext.Provider value={{
@@ -13,6 +14,8 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
     setSearchText,
     selectedCategory,
     setSelectedCategory,
+    maxPrice,
+    setMaxPrice,
   }}
 >
       {children}

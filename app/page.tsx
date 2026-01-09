@@ -5,7 +5,7 @@ import { useSearch } from "@/context/SearchContext";
 import { products } from "@/data/products";
 
 export default function Home() {
-  const { searchText, selectedCategory } = useSearch();
+  const { searchText, selectedCategory, maxPrice } = useSearch();
   const filteredProducts = products.filter((product) => {
   const matchesSearch = product.title
     .toLowerCase()
@@ -15,7 +15,9 @@ export default function Home() {
     selectedCategory === "all" ||
     product.category === selectedCategory;
 
-  return matchesSearch && matchesCategory;
+  const matchesPrice = product.price / 100 <= maxPrice;  
+
+  return matchesSearch && matchesCategory && matchesPrice;
 });
 
   return (
