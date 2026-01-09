@@ -17,26 +17,34 @@ function CategoryFilter() {
           <div className="pb-4 pl-1">
             <input
               type="checkbox"
-              id="Speakers"
+              id="electronics"
               className="mr-4 scale-150"
             />
-            <label htmlFor="Speakers">Speakers</label>
+            <label htmlFor="electronics">Electronics</label>
           </div>
           <div className="pb-4 pl-1">
             <input
               type="checkbox"
-              id="Headphones"
+              id="footwear"
               className="mr-4 scale-150"
             />
-            <label htmlFor="Headphones">Headphones</label>
+            <label htmlFor="footwear">Footwear</label>
           </div>
           <div className="pb-4 pl-1">
             <input
               type="checkbox"
-              id="Earbuds"
+              id="clothing"
               className="mr-4 scale-150"
             />
-            <label htmlFor="Earbuds">Earbuds</label>
+            <label htmlFor="clothing">Clothing</label>
+          </div>
+          <div className="pb-4 pl-1">
+            <input
+              type="checkbox"
+              id="accessories"
+              className="mr-4 scale-150"
+            />
+            <label htmlFor="accessories">Accessories</label>
           </div>
         </div>
     </div>
