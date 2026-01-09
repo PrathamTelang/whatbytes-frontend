@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 type Product = {
@@ -14,6 +15,7 @@ type ProductCardProps = {
 
 function ProductCard({ product }: ProductCardProps) {
   return (
+    <Link href={`/product/${product.id}`}>
     <div className="flex flex-col rounded-lg p-4 hover:shadow-md  bg-[#F4F4F4] transition h-fit cursor-pointer">
       <div className="w-full flex justify-center items-center">
         <Image 
@@ -30,6 +32,7 @@ function ProductCard({ product }: ProductCardProps) {
       </div>
       <button className="mt-4 bg-black text-white px-4 py-2 rounded hover:bg-black/80 transition cursor-pointer">Add to Cart</button>
     </div>
+    </Link>
   );
 }
 
