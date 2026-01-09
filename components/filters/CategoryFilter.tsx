@@ -1,55 +1,36 @@
-import React from 'react'
+"use client";
+import React from "react";
+import { useSearch } from "@/context/SearchContext";
 
 function CategoryFilter() {
+  const { selectedCategory, setSelectedCategory } = useSearch();
+
   return (
     <div>
-        <div>
-        <div>
-            <h2 className="text-md font-semibold mb-6">Category</h2>
-          <div className="pb-4 pl-1">
-            <input
-              type="checkbox"
-              id="All"
-              className="mr-4 scale-150"
-            />
-            <label htmlFor="All">All</label>
-          </div>
-          <div className="pb-4 pl-1">
-            <input
-              type="checkbox"
-              id="electronics"
-              className="mr-4 scale-150"
-            />
-            <label htmlFor="electronics">Electronics</label>
-          </div>
-          <div className="pb-4 pl-1">
-            <input
-              type="checkbox"
-              id="footwear"
-              className="mr-4 scale-150"
-            />
-            <label htmlFor="footwear">Footwear</label>
-          </div>
-          <div className="pb-4 pl-1">
-            <input
-              type="checkbox"
-              id="clothing"
-              className="mr-4 scale-150"
-            />
-            <label htmlFor="clothing">Clothing</label>
-          </div>
-          <div className="pb-4 pl-1">
-            <input
-              type="checkbox"
-              id="accessories"
-              className="mr-4 scale-150"
-            />
-            <label htmlFor="accessories">Accessories</label>
-          </div>
-        </div>
+      <h2 className="text-md font-semibold mb-6">Category</h2>
+
+      {[
+        { label: "All", value: "all" },
+        { label: "Electronics", value: "electronics" },
+        { label: "Footwear", value: "footwear" },
+        { label: "Clothing", value: "clothing" },
+        { label: "Accessories", value: "accessories" },
+      ].map((category) => (
+        <label
+          key={category.value}
+          className="flex items-center gap-4 pb-4 cursor-pointer"
+        >
+          <input
+            type="checkbox"
+            checked={selectedCategory === category.value}
+            onChange={() => setSelectedCategory(category.value)}
+            className="scale-150"
+          />
+          {category.label}
+        </label>
+      ))}
     </div>
-    </div>
-  )
+  );
 }
 
-export default CategoryFilter
+export default CategoryFilter;

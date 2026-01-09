@@ -5,10 +5,18 @@ import { useSearch } from "@/context/SearchContext";
 import { products } from "@/data/products";
 
 export default function Home() {
-  const { searchText } = useSearch();
-  const filteredProducts = products.filter((product) =>
-  product.title.toLowerCase().includes(searchText.toLowerCase())
-);
+  const { searchText, selectedCategory } = useSearch();
+  const filteredProducts = products.filter((product) => {
+  const matchesSearch = product.title
+    .toLowerCase()
+    .includes(searchText.toLowerCase());
+
+  const matchesCategory =
+    selectedCategory === "all" ||
+    product.category === selectedCategory;
+
+  return matchesSearch && matchesCategory;
+});
 
   return (
     <div className="flex">
