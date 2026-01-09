@@ -8,9 +8,9 @@ type SearchbarProps = {
 
 function Searchbar({ value, onChange }: SearchbarProps) {
   return (
-    <div className='w-full sm:px-40'>
+    <div className='w-full lg:px-40 mx-2'>
               <input 
-              className='border w-full border-gray-300 shadow  rounded-md px-4 py-2 focus:outline-none focus:shadow-lg' placeholder="Search for products" 
+              className='border w-full border-gray-300 shadow  rounded-md  px-4 py-2 focus:outline-none focus:shadow-lg' placeholder="Search for products" 
               value={value} 
               onChange={(e) => onChange(e.target.value)} />
             </div>

@@ -13,10 +13,10 @@ const { searchText, setSearchText } = useSearch();
 
 
   return (
-    <div className='w-screen bg-white sm:h-18 flex justify-between items-center px-8 text-black border-b border-gray-300 py-4 shadow'>
-        <div className='flex justify-center items-center gap-2'>
+    <div className='w-screen bg-white sm:h-18 flex justify-between items-center sm:px-8 px-2 text-black border-b border-gray-300 py-4 shadow'>
+        <div className='sm:flex justify-center items-center gap-2 hidden'>
           <FaCircle className='text-2xl text-orange-600' />
-          <h1 className='font-bold text-xl tracking-widest'>WHATBYTES</h1>
+          <h1 className='font-bold text-xl tracking-widest '>WHATBYTES</h1>
         </div>
         <Searchbar value={searchText} onChange={setSearchText} />
         <div className='flex justify-center items-center gap-2'>

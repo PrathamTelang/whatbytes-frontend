@@ -18,7 +18,7 @@ function CategoryFilter() {
       ].map((category) => (
         <label
           key={category.value}
-          className="flex items-center gap-4 pb-4 cursor-pointer"
+          className="flex items-center gap-1 sm:gap-4 pb-4 cursor-pointer"
         >
           <input
             type="checkbox"

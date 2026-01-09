@@ -4,7 +4,7 @@ import PriceFilter from './PriceFilter'
 
 function Sidebar() {
   return (
-    <div className="w-96 h-auto bg-[#FAFAFA] p-4">
+    <div className="md:w-48 lg:w-96  w-28 h-auto bg-[#FAFAFA] p-4">
           <CategoryFilter />
           <PriceFilter />
         </div>
