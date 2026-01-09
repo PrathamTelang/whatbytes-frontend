@@ -1,3 +1,4 @@
+import { useCart } from "@/context/CardContext";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -14,6 +15,8 @@ type ProductCardProps = {
 };
 
 function ProductCard({ product }: ProductCardProps) {
+  const { addToCart } = useCart();
+
   return (
     <Link href={`/product/${product.id}`}>
     <div className="flex flex-col rounded-lg p-4 hover:shadow-md  bg-[#F4F4F4] transition h-fit cursor-pointer">
@@ -30,7 +33,21 @@ function ProductCard({ product }: ProductCardProps) {
         <h2 className="text-lg font-semibold mb-2">{product.title}</h2>
       <p className="font-medium">${product.price/100}</p>
       </div>
-      <button className="mt-4 bg-black text-white px-4 py-2 rounded hover:bg-black/80 transition cursor-pointer">Add to Cart</button>
+      <button
+  className="mt-4 bg-black text-white px-4 py-2 rounded hover:bg-black/80 transition"
+  onClick={(e) => {
+    e.preventDefault();
+    addToCart({
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      image: product.image,
+      quantity: 1,
+    });
+  }}
+>
+  Add to Cart
+</button>
     </div>
     </Link>
   );
