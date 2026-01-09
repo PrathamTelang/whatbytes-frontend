@@ -3,14 +3,15 @@ import React from 'react'
 import { CiShoppingCart, CiUser } from 'react-icons/ci'
 import { FaCircle } from 'react-icons/fa'
 import Searchbar from '../filters/Searchbar'
+import { useSearch } from '@/context/SearchContext'
 
-type HeaderProps = {
-  searchText: string;
-  setSearchText: (value: string) => void;
-};
 
-function Header({ searchText, setSearchText }: HeaderProps) {
+
+function Header() {
   
+const { searchText, setSearchText } = useSearch();
+
+
   return (
     <div className='w-screen bg-white sm:h-18 flex justify-between items-center px-8 text-black border-b border-gray-300 py-4 shadow'>
         <div className='flex justify-center items-center gap-2'>
