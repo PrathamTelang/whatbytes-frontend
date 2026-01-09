@@ -2,7 +2,7 @@ export const products = [
   {
     id: "1",
     title: "iPhone 14 Pro",
-    price: 129999,
+    price: 90099,
     category: "electronics",
     image: "/images/iphone-14.jpg",
     description: "Apple iPhone 14 Pro with A16 Bionic chip and ProMotion display.",
@@ -11,7 +11,7 @@ export const products = [
   {
     id: "2",
     title: "MacBook Air M2",
-    price: 114999,
+    price: 94999,
     category: "electronics",
     image: "/images/macbook-air.jpg",
     description: "Lightweight MacBook Air powered by Apple's M2 chip.",
