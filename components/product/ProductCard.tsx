@@ -1,4 +1,4 @@
-import { useCart } from "@/context/CardContext";
+import { useCart } from "@/context/CartContext";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
