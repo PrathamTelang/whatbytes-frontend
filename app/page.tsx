@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="flex">
       {/* Sidebar */}
-        <div className="w-64 h-screen bg-[#FAFAFA] p-4">
+        <div className="w-96 h-screen bg-[#FAFAFA] p-4">
           <CategoryFilter />
           <PriceFilter />
         </div>
